@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe</title>
+    <link rel="stylesheet" href="libs/slick/slick-theme.css">
+    <link rel="stylesheet" href="libs/slick/slick.css">
+    <link rel="stylesheet" href="assets/css/boostrap.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style type="text/css">
+        :root {
+            
+            --height-top-bar: 90px;
+        }
+        body {
+            background-image: url(assets/images/BG.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .container {
+            width: 90%;
+            max-width: 100%;
+            margin: 0 auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .top-bar {
+            background-color: #ff23ff;
+            height: var(--height-top-bar);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .top-bar__text {
+            font-size: 1.733rem;
+            letter-spacing: 1px;
+            color: var(--white-color);
+            text-align: center;
+        }
+        .top-bar__text--bold {
+            font-weight: 600;
+            margin-left: 4px;
+        }
+        .header {
+            position: fixed;
+            top: calc(var(--height-top-bar) + 10px);
+            left: 0;
+            right: 0;
+            z-index: 99;
+        }
+        .header.sticky {
+            top: 10px;
+        }
+        .header__wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header__logo {
+            width: 90px;
+        }
+        .header__logo-link {
+            display: block;
+        }
+        .header__menu-list {
+            display: flex;
+        }
+        .header__menu-item {
+            margin: 0 20px;
+        }
+        .header__menu-item:last-child {
+            margin-right: 0;
+        }
+        .header__menu-link {
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+            color: var(--white-color);
+            text-transform: uppercase;
+        }
+        .header__menu-link:hover {
+            color: rgba(255, 255, 255, 0.7);
+            transition: all .3s ease;
+        }
+
+        .hero-module {
+            position: relative;
+            height: calc(100vh - var(--height-top-bar));
+        }
+
+        .hero-module__slider {
+            margin-bottom: 0;
+            position: relative;
+            height: 100%;
+        }
+        .hero__module-slider-video,
+        .hero__module-slider-img {
+            width: 100%;
+            height: calc(100vh - var(--height-top-bar));
+            object-fit: cover;
+        }
+        .hero-module__slider .slick-prev,
+        .hero-module__slider .slick-next {
+            z-index: 9;
+        }
+        .hero-module__slider .slick-prev {
+            left: 100px;
+        }
+        .hero-module__slider .slick-next {
+            right: 100px;
+        }
+        /* Widget Social */
+        .widget-social {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            /* background-color: #681d8096; */
+            background-color: rgba(121, 0, 250, 0.29);
+            width: 88px;
+            height: 75vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 40px 0;
+        }
+        .widget-social__link-text {
+            color: var(--white-color);
+            font-size: 2rem;
+            font-weight: 800;
+            font-family: var(--font-title);
+            display: inline-block;
+            writing-mode: vertical-lr;
+        }
+        .widget-social__list {
+            margin-top: 50px;
+        }
+        .widget-social__item {
+            margin-bottom: 16px;
+        }
+        .widget-social__item:last-child {
+            margin-bottom: 0;
+        }
+        .widget-social__icon {
+            width: 18px;
+            height: 18px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+        }
+        /* End Widget Social */
+
+        .line-fixed {
+            position: fixed;
+            top: var(--height-top-bar);
+            border-left: 1px solid #979797;
+            height: 100%;
+        }
+        .line-fixed.sticky {
+            top: 0;
+        }
+        .line-fixed__left {
+            left: 58px;
+        }
+        .line-fixed__right {
+            right: 58px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <span class="top-bar__text">OFFICIAL DEFIHORSE TOken Contract (BEP-20):</span>
+        <span class="top-bar__text top-bar__text--bold">0xE3233fdb23F1c27aB37Bd66A19a1f1762fCf5f3F</span>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__logo">
+                    <a href="" class="header__logo-link">
+                        <img src="assets/images/logo.png" alt="" class="header__logo-img">
+                    </a>
+                </div>
+                <ul class="header__menu-list">
+                    <li class="header__menu-item">
+                        <a href="" class="header__menu-link">about us</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="" class="header__menu-link">story</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="" class="header__menu-link">tokenomics</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="" class="header__menu-link">media</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="" class="header__menu-link">newsfeed</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section class="section hero-module">
+        <div class="hero-module__slider">
+            <div class="hero-module__slider-item video">
+                <video class="hero__module-slider-video" autoplay="autoplay" loop="loop">
+                    <source src="assets/images/DeFiHorse.mp4" type="video/mp4"/>
+                </video>
+            </div>
+            <div class="hero-module__slider-item">
+                <img src="../assets/images/hero-img.jpg" alt="" class="hero__module-slider-img">
+            </div>
+        </div>
+
+        <div class="widget-social">
+            <a href="" class="widget-social__link-text">connect wallet</a>
+            <ul class="widget-social__list">
+                <li class="widget-social__item">
+                    <a href="" class="widget-social__link-icon">
+                        <img src="assets/images/facebook.svg" alt="" class="widget-social__icon">
+                    </a>
+                </li>
+                <li class="widget-social__item">
+                    <a href="" class="widget-social__link-icon">
+                        <img src="assets/images/instagram.svg" alt="" class="widget-social__icon">
+                    </a>
+                </li>
+                <li class="widget-social__item">
+                    <a href="" class="widget-social__link-icon">
+                        <img src="assets/images/pngwing.svg" alt="" class="widget-social__icon">
+                    </a>
+                </li>
+                <li class="widget-social__item">
+                    <a href="" class="widget-social__link-icon">
+                        <img src="assets/images/twitter.svg" alt="" class="widget-social__icon">
+                    </a>
+                </li>
+                <li class="widget-social__item">
+                    <a href="" class="widget-social__link-icon">
+                        <img src="assets/images/youtube.svg" alt="" class="widget-social__icon">
+                    </a>
+                </li>
+                <li class="widget-social__item">
+                    <a href="" class="widget-social__link-icon">
+                        <img src="assets/images/discord.svg" alt="" class="widget-social__icon">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <div class="line-fixed line-fixed__left"></div>
+    <div class="line-fixed line-fixed__right"></div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="libs/slick/slick.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            var top = $('.top-bar').height();
+
+            // Add Sticky Header
+            $(window).on("scroll", function () {
+                if ($(this).scrollTop() > top) {
+                    $('.header').addClass('sticky');
+                    $('.line-fixed').addClass('sticky');
+                } else {
+                    $('.header').removeClass('sticky');
+                    $('.line-fixed').removeClass('sticky');
+                }
+            });
+
+
+            var slideWrapper = $(".hero-module__slider");
+
+            slideWrapper.slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                speed: 600,
+                // autoplay: true,
+                // autoplaySpeed: 2000,
+                dots: false,
+                arrows: true,
+                fade: true,
+                cssEase: 'linear',
+                infinite: true,
+                // lazyLoad:"progressive",
+            });
+
+            // When the slide is changing
+            function playPauseVideo(slick, control){
+                var currentSlide, slideType, startTime, video;
+
+                currentSlide = slick.find(".slick-current");
+                slideType = currentSlide.attr("class").split(" ")[1];
+                startTime = currentSlide.data("video-start");
+
+                if (slideType === "video") {
+                    video = currentSlide.children("video").get(0);
+                    if (video != null) {
+                        if (control === "play"){
+                            video.play();
+                        } else {
+                            video.pause();
+                        }
+                    }
+                }
+            }
+
+            slideWrapper.on("beforeChange", function(event, slick) {
+                slick = $(slick.$slider);
+                playPauseVideo(slick,"pause");
+            });
+            slideWrapper.on("afterChange", function(event, slick) {
+                slick = $(slick.$slider);
+                playPauseVideo(slick,"play");
+            });
+
+            slideWrapper.on('init', function(event, slick){
+                $(".video video")[0].play();
+            });
+
+
+    })
+    </script>
+</body>
+
+</html>

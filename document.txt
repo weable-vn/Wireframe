@@ -1,0 +1,5 @@
+- Top Bar, Header: Chưa responsive
+- Hero Module: Video lúc mới vào chưa tự động chạy, chưa responsive
+- Section Video Ngựa: Chưa hoàn thành
+- Section UPCOMMING EVENTS: Hoàn thành
+- Section trường đua ngựa: chưa hoàn thành
