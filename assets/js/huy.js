@@ -1,11 +1,11 @@
  /*
-                      |--------------------------------------------------------------------------
-                      | Custom JS
-                      |--------------------------------------------------------------------------
-                      |
-                      | About author: https://Sticky.vn/
-                      |
-                      */
+                                                              |--------------------------------------------------------------------------
+                                                              | Custom JS
+                                                              |--------------------------------------------------------------------------
+                                                              |
+                                                              | About author: https://Sticky.vn/
+                                                              |
+                                                              */
 
  /* ------------------------------------------------------------------------ *  
      Sticky header when scroll
@@ -70,6 +70,33 @@
              // instead of a settings object
          ]
      });
+
+
+
+     //  slider-view
+     $('.view-more-media .bg-view .slider-for').slick({
+         slidesToShow: 1,
+         slidesToScroll: 1,
+         arrows: false,
+         fade: true,
+         asNavFor: '.view-more-media .bg-view .slider-nav'
+     });
+     $('.view-more-media .bg-view .slider-nav').slick({
+         slidesToShow: 3,
+         slidesToScroll: 1,
+         asNavFor: '.view-more-media .bg-view .slider-for',
+         dots: true,
+         centerMode: true,
+         focusOnSelect: true,
+         centerPadding: '0px',
+         infinite: true,
+     });
+
+
+     $('.view-more-media .bg-view .slider-nav .img-bg').click(function() {
+         $('.view-more-media .bg-view .slider-for .img-houre img').addClass('show')
+     });
+
 
 
 

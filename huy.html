@@ -22,6 +22,32 @@
             object-fit: cover;
         }
         
+        .img-wrap {
+            position: relative;
+            height: auto;
+            overflow: hidden;
+            background-position: 50% 50%;
+            background-size: cover;
+            padding-top: 56.25%;
+        }
+        
+        .img-wrap img {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 100%;
+            transform: translateZ(0);
+            margin: 0 auto;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            position: absolute;
+            object-position: 50% 50%;
+            object-fit: cover;
+        }
+        
         .upcomming {
             background: #000;
             padding: 40px 0;
@@ -34,11 +60,11 @@
             text-shadow: 3px 2px 0 #1a5696;
         }
         
-        .line {
+        .upcomming .line {
             margin-bottom: 24px;
         }
         
-        .line img {
+        .upcomming .line img {
             width: 17%;
         }
         
@@ -80,12 +106,12 @@
             margin-bottom: -1px;
         }
         
-        .slick-slide {
+        .item-event.slick-slide {
             margin: 0 10px;
         }
         /* the parent */
         
-        .slick-list {
+        .item-event.slick-list {
             margin: 0 -10px;
         }
         
@@ -154,25 +180,160 @@
         /* section view-more-media*/
         
         .view-more-media {
-            background: #000;
-        }
-        
-        .view-more-media {
+            background-image: url(assets/images/backgroud1.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
             position: relative;
         }
         
-        .view-more-media .img-bg {
-            position: absolute;
-            top: 12%;
-            width: 71%;
-            left: 14.5%;
+        .view-more-media .bg-view {
+            position: relative;
         }
         
-        .view-more-media .img-houre {
+        .view-more-media .bg-view .slider-for .img-bg {
             position: absolute;
-            width: 50%;
             top: 7%;
-            left: 48%;
+            width: 92%;
+            left: 4.5%;
+        }
+        
+        .img-houre img {
+            transform: translateX(100%);
+        }
+        
+        .bg-view .slick-active .img-houre img.show {
+            transform: translateX(40%);
+            transition: 3s;
+            width: 64%;
+        }
+        
+        .bg-view .slick-active .img-houre img {
+            transform: translateX(40%);
+            transition: 3s;
+            width: 64%;
+        }
+        
+        .bg-view .slider-for .img-wrap {
+            padding-top: 9%;
+            margin-bottom: 12px;
+        }
+        
+        .bg-view .slider-nav .img-wrap {
+            padding-top: 3.5%;
+            filter: drop-shadow(2.5px 2.5px 5px #0ebeff);
+            margin-bottom: 12px;
+        }
+        
+        .bg-view .box-img {
+            margin: 31px 48px;
+            position: absolute;
+            left: 45.5%;
+            top: 43%;
+            height: 89%;
+            width: 91%;
+            object-fit: cover;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        
+        .bg-view .slick-prev:before,
+        .slick-next:before {
+            display: none;
+        }
+        
+        .bg-view .slick-dots li {
+            display: none;
+        }
+        
+        .view-more-media .btn-view-media {
+            position: absolute;
+            left: -4.5%;
+            top: 37%;
+            transform: translateY(-50%) rotate(-90deg);
+        }
+        
+        .view-more-media .btn-view-media a {
+            background: #590279;
+            color: #fff;
+            padding: 20px;
+            font-weight: 700;
+            font-size: 22px;
+            border-radius: 0 0 0 15px;
+        }
+        
+        .bg-view .slick-slide {
+            margin: 0 20px;
+        }
+        /* the parent */
+        
+        .bg-view .slick-list {
+            margin: 0 -20px;
+        }
+        /* Responsive */
+        
+        @media (max-width: 1399px) {}
+        
+        @media (max-width: 1199px) {}
+        
+        @media (max-width: 991px) {
+            .list-event .slick-prev {
+                left: -9px;
+            }
+            .list-event .slick-next {
+                right: -9px;
+            }
+            .bg-view .box-img {
+                left: 44.7%;
+                top: 42.5%;
+                height: 87%;
+                width: 91%;
+            }
+            .view-more-media .btn-view-media {
+                top: 100%;
+                transform: translateY(0%) rotate(-0deg);
+                left: 0%;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .view-more-media .btn-view-media a {
+                font-size: 20px;
+            }
+            .bg-view .box-img {
+                left: 43%;
+                top: 40.8%;
+                height: 86%;
+                width: 91%;
+            }
+        }
+        
+        @media (max-width: 650px) {
+            .bg-view .box-img {
+                left: 42%;
+                top: 39.5%;
+                height: 85%;
+                width: 91%;
+            }
+        }
+        
+        @media (max-width: 574px) {
+            .bg-view .box-img {
+                left: 41%;
+                top: 38.5%;
+                height: 84%;
+                width: 91%;
+            }
+        }
+        
+        @media (max-width: 460px) {
+            .bg-view .box-img {
+                left: 38%;
+                top: 35.5%;
+                height: 82%;
+                width: 91%;
+            }
         }
     </style>
 
@@ -254,23 +415,108 @@
             </div>
         </div>
     </section>
-    <!-- view-more-media -->
+
     <section class="section view-more-media">
         <div class="container">
-            <div class="bg-view big-img">
-                <div class="img-frame">
-                    <img src="assets/images/frame.png" alt="">
-                </div>
-                <div class="box-img big-img">
-                    <div class="img-bg">
-                        <img src="assets/images/Copy of FR 8.png" alt="">
+            <div class="bg-view">
+                <div class="slider-for">
+                    <div class="img-wrap img-bg">
+                        <div class="img-line">
+                            <img src="assets/images/bg-line.png" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="assets/images/Background.png" alt="">
+                        </div>
+                        <div class="img-houre">
+                            <img src="assets/images/AresM_Pose 02.png" alt="">
+                        </div>
                     </div>
-                    <div class="img-houre">
-                        <img src="assets/images/AresM_Pose 02.png" alt="">
+                    <div class="img-wrap img-bg">
+                        <div class="img-line">
+                            <img src="assets/images/bg-line.png" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="assets/images/Copy of fr 11  12.png" alt="">
+                        </div>
+                        <div class="img-houre">
+                            <img src="assets/images/AresM_Pose 02.png" alt="">
+                        </div>
+                    </div>
+                    <div class="img-wrap img-bg">
+                        <div class="img-line">
+                            <img src="assets/images/bg-line.png" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="assets/images/Copy of FR 7  revise.png" alt="">
+                        </div>
+                        <div class="img-houre">
+                            <img src="assets/images/AresM_Pose 02.png" alt="">
+                        </div>
+                    </div>
+                    <div class="img-wrap img-bg">
+                        <div class="img-line">
+                            <img src="assets/images/bg-line.png" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="assets/images/Copy of FR 9 revise.png" alt="">
+                        </div>
+                        <div class="img-houre">
+                            <img src="assets/images/AresM_Pose 02.png" alt="">
+                        </div>
+                    </div>
+                    <div class="img-wrap img-bg">
+                        <div class="img-line">
+                            <img src="assets/images/bg-line.png" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="assets/images/Copy of fr 11  12.png" alt="">
+                        </div>
+                        <div class="img-houre">
+                            <img src="assets/images/AresM_Pose 02.png" alt="">
+                        </div>
+                    </div>
+                    <div class="img-wrap img-bg">
+                        <div class="img-line">
+                            <img src="assets/images/bg-line.png" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="assets/images/Copy of FR 9 revise.png" alt="">
+                        </div>
+                        <div class="img-houre">
+                            <img src="assets/images/AresM_Pose 02.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-nav">
+                    <div class="img-wrap img-bg">
+                        <img src="assets/images/Background.png" alt="">
+                    </div>
+                    <div class="img-wrap img-bg">
+                        <img src="assets/images/Copy of fr 11  12.png" alt="">
+                    </div>
+                    <div class="img-wrap img-bg">
+                        <img src="assets/images/Copy of FR 7  revise.png" alt="">
+                    </div>
+                    <div class="img-wrap img-bg">
+                        <img src="assets/images/Copy of FR 9 revise.png" alt="">
+                    </div>
+                    <div class="img-wrap img-bg">
+                        <img src="assets/images/Copy of fr 11  12.png" alt="">
+                    </div>
+                    <div class="img-wrap img-bg">
+                        <img src="assets/images/Copy of FR 9 revise.png" alt="">
                     </div>
                 </div>
             </div>
+
+            <div class="btn-view-media">
+                <a href="">VIEW MORE MEDIA</a>
+            </div>
+
+        </div>
     </section>
+
 
 
 
