@@ -767,7 +767,8 @@
                     $('.popup-video').removeClass('open');
                     $('.hero-module__btn-img').removeClass('hiden');
                     $('.popup-video video').removeAttr('src');
-                }
+                    $('.popup-video video')[0].pause()
+                };
                 
             })
         })
