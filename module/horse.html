@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe</title>
+    <link rel="stylesheet" href="../libs/slick/slick.css">
+    <link rel="stylesheet" href="../libs/slick/slick-theme.css">
+    <link rel="stylesheet" href="../assets/css/boostrap.css">
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .section {
+            padding: 40px 0;
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        .img-wrap {
+            position: relative;
+            height: auto;
+            overflow: hidden;
+            background-position: 50% 50%;
+            background-size: cover;
+            padding-top: 56.25%;
+        }
+        
+        .img-wrap img {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 100%;
+            transform: translateZ(0);
+            margin: 0 auto;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            position: absolute;
+            object-position: 50% 50%;
+            object-fit: cover;
+        }
+        
+        .horse{
+            background-image: url(../assets/images/backgroud-view.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .horse .slide-for .item{
+            position: relative;
+        }
+        .horse .iframe::after{
+            background-image: url(../assets/images/khung-truong-dua-new.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .horse .slider-for .item .img-houre img {
+            transform: translateX(100%);
+        }
+        
+        .horse .slick-active .img-houre img.show {
+            transform: translateX(40%);
+            transition: 3s;
+            width: 64%;
+        }
+
+        .horse .slider-for .item{
+            position: relative;
+        }
+
+        .horse .slider-for .item .img-houre img{
+            position: absolute;
+            z-index: 99;
+            top: 50px;
+            left: 250px;
+        }
+        
+        .horse .slick-slide {
+            margin: 0 20px;
+        }
+        /* the parent */
+        
+        .horse .slick-list {
+            margin: 0 -20px;
+        }
+
+        .horse .slider-nav .img-wrap{
+            padding-top: 15%;
+            filter: drop-shadow(2.5px 2.5px 5px #0ebeff);
+        }
+
+        .horse .btn-view-media {
+            position: absolute;
+            left: -5.5%;
+            top: 30%;
+            transform: translateY(-50%) rotate(-90deg);
+        }
+        
+        .horse .btn-view-media a {
+            background: #590279;
+            color: #fff;
+            padding: 20px;
+            font-weight: 700;
+            font-size: 22px;
+            border-radius: 0 0 0 15px;
+        }
+        .horse .btn-view-media a:hover{
+            background: #9e77ad;
+        }
+        /* responsive */
+        @media (max-width: 991px){
+           
+        }
+        @media (max-width: 767px){
+            .horse{
+                padding: 100px 0;
+            }
+            .horse .btn-view-media{
+                transform: translateY(0);
+                top: 85%;
+                left: 6%
+            }
+            .horse .btn-view-media a{
+                padding: 16px;
+                font-size: 14px;
+                border-radius: 8px;
+            }
+            .horse .slick-active .img-houre img.show{
+                transform: translateX(-5%);
+                top: 30px;
+            }
+           
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <section class="section horse">
+        <div class="container">
+            <div class="slider-for">
+                   <div class="item">
+                        <div class="iframe"></div>
+                        <div class="img-bg">
+                            <img src="../assets/images/Background.png" alt="">
+                        </div>
+                        <div class="img-houre">
+                            <img src="../assets/images/AresM_Pose 02.png" alt="">
+                        </div>
+                   </div>
+
+                <div class="item">
+                    <div class="iframe"></div>
+                    <div class="img-bg">
+                        <img src="../assets/images/demo.png" alt="">
+                    </div>
+                    <div class="img-houre">
+                        <img src="../assets/images/AresM_Pose 02.png" alt="">
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <div class="iframe"></div>
+                    <div class="img-bg">
+                        <img src="../assets/images/Background.png" alt="">
+                    </div>
+                    <div class="img-houre">
+                        <img src="../assets/images/AresM_Pose 02.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <div class="item-nav img-wrap">
+                    <img src="../assets/images/Copy of fr 11  12.png" alt="">
+                </div>
+                <div class="item-nav img-wrap">
+                    <img src="../assets/images/demo.png" alt="">
+                </div>
+                <div class="item-nav img-wrap">
+                    <img src="../assets/images/Copy of fr 11  12.png" alt="">
+                </div>
+            </div>
+            <div class="btn-view-media">
+                <a href="">VIEW MORE MEDIA</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/horse.js"></script>
+    <script src="../libs/slick/slick.min.js"></script>
+</body>
+
+
+</html>
