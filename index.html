@@ -766,7 +766,7 @@
                 if($(event.target).hasClass('popup-video')) {
                     $('.popup-video').removeClass('open');
                     $('.hero-module__btn-img').removeClass('hiden');
-                    $('.popup-video video').attr('src', "");
+                    $('.popup-video video').removeAttr('src');
                 }
                 
             })
