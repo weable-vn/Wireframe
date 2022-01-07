@@ -219,6 +219,42 @@
         .hero-module__slider .slick-next {
             right: 100px;
         }
+
+        .hero-module__btn-img {
+            position: absolute;
+            bottom: 50px;
+            right: 100px;
+            width: 200px;
+            height: 134px;
+            cursor: pointer;
+        }
+
+        .hero-module__btn-img.hiden {
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s ease-out;
+        }
+
+        .hero-module__btn-thumbnail {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+
+        .hero-module__btn-icon {
+            width: 45px;
+            height: 45px;
+            padding: 14px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+            border: 1px solid #fff;
+            border-radius: 50%;
+            fill: #fff;
+        }
+
         /* End Hero Module */
 
         /* Slick Arrows */
@@ -303,6 +339,44 @@
         }
         /* End Widget Social */
 
+        /* Popup Video */
+        .popup-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+            z-index: 998;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0,0,0,.5);
+            user-select: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s ease-in;
+        }
+
+        .popup-video.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .popup-video__container {
+            width: 73%;
+            position: absolute;
+            z-index: 999;
+        }
+
+        .popup-video video {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* End Popup Video */
+
         /* Line */
         .line-fixed {
             position: fixed;
@@ -332,6 +406,14 @@
             .hero__module-slider-video, 
             .hero__module-slider-img {
                 height: auto;
+            }
+
+            .hero-module__btn-img {
+                width: 150px;
+                height: 84px;
+            }
+            .popup-video__container {
+                width: 85%;
             }
         }
 
@@ -401,6 +483,14 @@
 
             .hero-module__slider .slick-next {
                 right: 15px;
+            }
+            .hero-module__btn-img {
+                width: 150px;
+                height: 84px;
+                right: 15px;
+            }
+            .popup-video__container {
+                width: 90%;
             }
             /* End Hero Module */
         }
@@ -481,6 +571,23 @@
             .hero__module-slider-img {
                 height: auto;
             }
+            .hero-module__btn-img {
+                width: 100px;
+                height: 50px;
+                bottom: 25px;
+            }
+            .hero-module__btn-icon {
+                width: 25px;
+                height: 25px;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .hero-module__btn-icon svg {
+                width: 10px;
+                height: 10px;
+            }
             /* End Hero Module */
 
             /* Slick Arrow */
@@ -548,13 +655,31 @@
 
     <section class="section hero-module">
         <div class="hero-module__slider">
-            <div class="hero-module__slider-item video">
-                <video class="hero__module-slider-video" autoplay="true" muted loop playsinline>
-                    <source src="assets/images/DeFiHorse.mp4" type="video/mp4" />
-                </video>
-            </div>
             <div class="hero-module__slider-item">
                 <img src="../assets/images/hero-img.jpg" alt="" class="hero__module-slider-img">
+                <div class="hero-module__btn-img" data-video-src="assets/images/DeFiHorse.mp4">
+                    <img src="assets/images/chaos.jpg" alt="" class="hero-module__btn-thumbnail">
+                    <div class="hero-module__btn-icon">
+                        <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 330 330" xml:space="preserve">
+                            <path id="XMLID_308_" d="M37.728,328.12c2.266,1.256,4.77,1.88,7.272,1.88c2.763,0,5.522-0.763,7.95-2.28l240-149.999 c4.386-2.741,7.05-7.548,7.05-12.72c0-5.172-2.664-9.979-7.05-12.72L52.95,2.28c-4.625-2.891-10.453-3.043-15.222-0.4 C32.959,4.524,30,9.547,30,15v300C30,320.453,32.959,325.476,37.728,328.12z"></path>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -595,6 +720,11 @@
         </div>
     </section>
     
+    <div class="popup-video">
+        <div class="popup-video__container">
+            <video  controls autoplay></video>
+        </div>
+    </div>
     
     <div class="line-fixed line-fixed__left hide-on-tablet-mobile"></div>
     <div class="line-fixed line-fixed__right hide-on-tablet-mobile"></div>
@@ -623,6 +753,23 @@
                 $(this).toggleClass('open');
                 $('.header__menu-list').toggleClass('open');
             });
+
+            // Popup video
+
+            $('.hero-module__btn-img').click(function() {
+                $(this).addClass('hiden');
+                var src = $(this).attr('data-video-src');
+                $('.popup-video').addClass('open');
+                $('.popup-video video').attr('src', src);
+            });
+            $('.popup-video').click(function(event) {
+                if($(event.target).hasClass('popup-video')) {
+                    $('.popup-video').removeClass('open');
+                    $('.hero-module__btn-img').removeClass('hiden');
+                    $('.popup-video video').attr('src', "");
+                }
+                
+            })
         })
 
     </script>

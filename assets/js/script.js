@@ -26,12 +26,11 @@ jQuery(document).ready(function() {
     $(function() {
 
         slideWrapper.on("init", function(slick){
-            // slick = $(slick.currentTarget);
-            // setTimeout(function(){
-            //     playPauseVideo(slick,"play");
-            // }, 1000);
-            $(".slick-active video")[0].play();
-            // $(".slick-active video").prop('muted', true);
+            slick = $(slick.currentTarget);
+            setTimeout(function(){
+                playPauseVideo(slick,"play");
+            }, 1000);
+            // $(".slick-active video")[0].play();
         });
 
         slideWrapper.on("beforeChange", function(event, slick) {
